@@ -384,7 +384,63 @@ h1 span {
     justify-content: center;
 }
 
+/* Skills */
 
+.skills {
+    background: black;
+}
+
+.skills .container {
+    background: rgba(255, 0, 0, 0.29); /* Changed to use RGBA for transparency */
+    color: var(--text-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 75%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.skills .container .row {
+    display: grid;
+    grid-template-columns: repeat(5, 3fr);
+    gap: 1.7rem;
+}
+
+.skills .container .bar {
+    padding: 10px;
+    border-radius: 1rem;
+    background: #080808;
+    box-shadow: 0 4px 10px var(--bg-color);
+    transition: 0.3s ease;
+    cursor: pointer;
+    width: 200px;
+}
+
+.skills .container .bar:hover {
+    box-shadow: 0 8px 15px rgb(255, 0, 0); 
+    transform: scale(1.03);/* Adjusted shadow on hover */
+    text-decoration:solid;
+}
+
+.skills .container .bar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: #ff0000;
+}
+
+.skills .container .bar .info img {
+    width: auto; /* Adjust the width as needed */
+    height: 60px; /* Maintain aspect ratio */
+}
+
+.skills .container .bar .info span{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
 
 
 
