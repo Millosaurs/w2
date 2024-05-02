@@ -318,7 +318,7 @@ h1 span {
 }
 .heading {
     font-size: 7rem; 
-    margin-bottom: 27px;
+    margin-bottom: 67px;
 }
 
 .services-container {
@@ -326,24 +326,44 @@ h1 span {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
-
 }
+
+.service-container {
+    position: relative;
+}
+
+.service-title {
+    text-align: center;
+    position: absolute;
+    top: -40px; /* Adjust the distance above the service box */
+    left: 0;
+    right: 0;
+    margin-bottom: 50px;
+}
+
+.service-title-text {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    
+}
+
 .service-box {
     background-color: var(--main-color);
-    height: 300px;
+    height: 300;
     border-radius: 3rem;
     cursor: pointer;
-    transition: 0.3s ease;   
-    margin-top: 50px;
+    transition: 0.3s ease;
+
 }
 
 .service-box:hover {
-    height: 350;
+    height: auto;
     background: white;
     color: var(--main-color);
     transform: scale(1.03);
     border: 1px solid var(--main-color);
 }
+
 .service-box .service-info {
     display: flex;
     flex-direction: column;
@@ -351,24 +371,21 @@ h1 span {
     justify-content: center;
     align-items: baseline;
     padding: 2em;
+    text-align: center;
 }
 
-.service-info h4 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-align: right;
-    margin-top: 29px;
-    margin-left: 18px;
-}
-.service-box p {
+.service-info p {
     font-size: 1.6rem;
-    text-align: left;
+    text-align: center;
     font-weight: 400;
     margin: 5px;
-    opacity: 1; /* Initially hide the text */
-    transition: opacity 0.3s ease; /* Add transition for smooth effect */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    justify-content: center;
 }
+
+
+
 
 
 
