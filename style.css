@@ -249,7 +249,7 @@ h1 span {
 .typing-text span::before {
     content: 'Software Developer';
     color: var(--main-color);
-    animation: words 20s infinite;
+    animation: words 20s steps(5) infinite;
 }
 
 .typing-text span::after {
@@ -260,7 +260,8 @@ h1 span {
     height: 100%;
     border-left: 3px solid var(--bg-color);
     right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    animation: cursor 0.6s infinite, typing 4s steps(14) infinite;
+    overflow: hidden;
 }
 
 @keyframes cursor {
@@ -271,27 +272,41 @@ h1 span {
 
 @keyframes words {
     0%, 20% {
-        content: 'Web Dev.';
+        content: 'Web Dev. ';
     }
-    21%, 40% {
-        content: 'Server.';
+    20.01%, 40% {
+        content: 'Server. ';
     }
-    41%, 60% {
-        content: 'Mod Dev.';
+    40.01%, 60% {
+        content: 'Mod Dev. ';
     }
-    61%, 80% {
-        content: 'Textures.';
+    60.01%, 80% {
+        content: 'Textures. ';
     }
-    81%, 100% {
-        content: 'Minecraft.';
+    80.01%, 100% {
+        content: 'Minecraft. ';
     }
 }
 
 @keyframes typing {
-    0%, 5%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95%, 100% {
+    5%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95% {
         width: 0;
     }
+    100% {
+        width: 100%;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1000px) {
     .home {
         gap: 4rem;
@@ -478,6 +493,97 @@ h1 span {
     color: var(--main-color);
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: 2.2rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 600px; /* Adjusted width */
+    padding: 0.8rem;
+    font-size: 1.8rem;
+    border: 2.4px solid var(--text-color);
+    border-radius: 0.5rem;
+    transition: red 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--main-color);
+}
+
+textarea {
+    height: 150px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    padding: 0.8rem 2.4rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 2.8rem;
+    color: white;
+    border: black;
+    cursor: pointer;
+    margin-top: 1rem; /* Add margin top for spacing */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-left: -30px;
+}
+
+button[type="submit"]:hover {
+    background-color: #000000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--main-color);
+}
+.bnt2 {
+    font-weight: blod;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-item {
+    margin: 0 1rem;
+}
+
+.info-item i {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--main-color);
+}
+
+.info-item p {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.info-item p span {
+    color: var(--main-color);
+}
+
+
 .products {
     padding: 4rem 0;
     text-align: center;
@@ -485,7 +591,7 @@ h1 span {
 }
 
 .products .heading {
-    color: var(--main-color);
+    color: var(--text-color);
     margin-bottom: 2rem;
 }
 
@@ -604,3 +710,25 @@ h1 span {
         margin: 0 5rem;
     }
 }
+
+::-webkit-scrollbar{
+    width: 20px;
+
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ff0000;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px red;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    transform: scale(2.03);
+    color: #ff000069;
+    cursor: pointer;
+ }
