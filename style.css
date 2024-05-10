@@ -272,19 +272,19 @@ h1 span {
 
 @keyframes words {
     0%, 20% {
-        content: 'Web Dev. ';
+        content: 'HTML. ';
     }
     20.01%, 40% {
-        content: 'Server. ';
+        content: 'Css. ';
     }
     40.01%, 60% {
-        content: 'Mod Dev. ';
+        content: 'Designing. ';
     }
     60.01%, 80% {
-        content: 'Textures. ';
+        content: 'Photo/Vid Editor. ';
     }
     80.01%, 100% {
-        content: 'Minecraft. ';
+        content: 'Games ';
     }
 }
 
